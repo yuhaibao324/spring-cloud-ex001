@@ -7,9 +7,10 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @SpringBootApplication
 @EnableEurekaClient
 public class PersonApplication {
-	
-	   public static void main(String[] args) {
-	        SpringApplication.run(PersonApplication.class, args);
-	    }
+
+    //# 在开发环境下使用hsqldb(Config Server下的person.yml), 在Docker生产环境下使用PostgreSQL（Config Server下的person-docker.yml）
+    public static void main(String[] args) {
+        SpringApplication.run(PersonApplication.class, args);
+    }
 
 }

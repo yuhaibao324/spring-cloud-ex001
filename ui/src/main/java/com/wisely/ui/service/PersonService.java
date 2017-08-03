@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.wisely.ui.domain.Person;
+import com.wisely.ui.entity.Person;
 
 @FeignClient("person")
 public interface PersonService {
-	 @RequestMapping(method = RequestMethod.POST, value = "/save",
-	            produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-	    @ResponseBody List<Person> save(@RequestBody String  name);
+    @RequestMapping(method = RequestMethod.POST, value = "/save",
+            produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    List<Person> save(@RequestBody String name);
 }

@@ -1,3 +1,4 @@
+# 在开发环境下使用hsqldb, 在Docker生产环境下使用PostgreSQL（person-docker.yml）
 spring:
   jpa:
     database: HSQL 
