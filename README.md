@@ -19,7 +19,8 @@ Spring Cloud基于Spring Boot，特别适合在Docker或其他专业Paas(平台�
 5.断路器 ：(Circuit Breaker)，主要是为了解决当某个方法调用失败的时候，调用后备方法来替代失败的方法，以达到容错、阻止级联错误等功能。
           Spring Cloud使用@EnableCircuitBreaker来启用断路器支持，使用@HystrixCommand的fallbackMethod来指定后备方法。
           通过@EnableHystrixDashboard注解开启一个控制台来监控断路器的运行情况。
-
+          
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 启动顺序：DiscoveryApplication、ConfigApplication，后面所有的微服务不分顺序，最后启动MonitorApplication。
 
 此时访问http://localhost:8761，查看Eureka Server
